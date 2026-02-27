@@ -43,6 +43,24 @@ Below is a synthesis of the design rules applied to this PDK (Polysilicon, Diffu
 
 ---
 
+## Featured Design: 4-Bit Sequence Detector
+
+This design demonstrates a complete integrated system within the PDK, combining timing generation, sequential storage, and combinational logic.
+
+### Architecture Overview:
+* **Clock Generation:** An on-chip **Ring Oscillator** serves as the primary clock source.
+* **Sequential Logic:** A 4-bit **Shift Register** captures the incoming data stream.
+* **Pattern Recognition:** A 4-input **AND gate** (with specific inverted inputs) monitors the register outputs to detect the target 4-bit pattern.
+* **Output:** The system triggers a high signal only when the pre-defined bit sequence is successfully matched.
+
+### Layout Highlights:
+* **Mixed-Signal Integration:** Coexistence of asynchronous timing (oscillator) and synchronous logic (registers) in a compact area.
+* **Routing Efficiency:** Optimized metal layers to manage clock distribution and feedback loops.
+
+![Sequence Detector Layout](cells/OSCILATOR_RING/APP_COMEPLETO.PNG)
+
+---
+
 ## How to Use
 
 1. **Clone** this repository to your local machine.
